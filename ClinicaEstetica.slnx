@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ClinicaEstetica.API/ClinicaEstetica.API.csproj" />
+  <Project Path="ClinicaEstetica.Application/ClinicaEstetica.Application.csproj" />
+  <Project Path="ClinicaEstetica.Domain/ClinicaEstetica.Domain.csproj" />
+  <Project Path="ClinicaEstetica.Infrastructure/ClinicaEstetica.Infrastructure.csproj" />
+</Solution>
