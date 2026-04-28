@@ -1,9 +1,11 @@
 ﻿using ClinicaEstetica.Application.DTOs.Paciente;
 using ClinicaEstetica.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicaEstetica.API.Controllers;
 
+[Authorize]
 public class PacientesController : BaseController
 {
     private readonly IPacienteService _service;

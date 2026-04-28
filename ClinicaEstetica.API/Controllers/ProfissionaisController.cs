@@ -1,9 +1,11 @@
 ﻿using ClinicaEstetica.Application.DTOs.Profissional;
 using ClinicaEstetica.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicaEstetica.API.Controllers;
 
+[Authorize]
 public class ProfissionaisController : BaseController
 {
     private readonly IProfissionalService _service;

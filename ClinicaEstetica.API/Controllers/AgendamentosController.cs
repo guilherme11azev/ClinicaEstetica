@@ -1,9 +1,11 @@
 ﻿using ClinicaEstetica.Application.DTOs.Agendamento;
 using ClinicaEstetica.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicaEstetica.API.Controllers;
 
+[Authorize]
 public class AgendamentosController : BaseController
 {
     private readonly IAgendamentoService _service;
