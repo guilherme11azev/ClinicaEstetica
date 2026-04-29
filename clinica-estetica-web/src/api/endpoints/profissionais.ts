@@ -1,5 +1,5 @@
 import api from '../axios';
-import { ProfissionalDto, CriarProfissionalDto } from '../../types';
+import { ProfissionalDto } from '../../types';
 
 export const profissionaisApi = {
   obterTodos: async (apenasAtivos = false): Promise<ProfissionalDto[]> => {
@@ -14,15 +14,12 @@ export const profissionaisApi = {
     return data;
   },
 
-  criar: async (dto: CriarProfissionalDto): Promise<ProfissionalDto> => {
+  criar: async (dto: Omit<ProfissionalDto, 'id' | 'status'>): Promise<ProfissionalDto> => {
     const { data } = await api.post<ProfissionalDto>('/profissionais', dto);
     return data;
   },
 
-  atualizar: async (
-    id: string,
-    dto: Partial<CriarProfissionalDto>
-  ): Promise<void> => {
+  atualizar: async (id: string, dto: Partial<ProfissionalDto>): Promise<void> => {
     await api.put(`/profissionais/${id}`, dto);
   },
 

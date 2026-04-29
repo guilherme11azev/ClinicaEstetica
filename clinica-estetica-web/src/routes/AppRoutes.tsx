@@ -14,7 +14,7 @@ function RotaProtegida({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-10 w-10
-          border-4 border-purple-200 border-t-purple-600" />
+          border-4 border-primary-200 border-t-primary-600" />
       </div>
     );
   }

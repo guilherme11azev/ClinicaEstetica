@@ -35,18 +35,21 @@ export function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-purple-100
       flex items-center justify-center p-4">
       <div className="w-full max-w-md">
+        {/* Card */}
         <div className="bg-white rounded-2xl shadow-xl p-8">
           {/* Logo */}
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center
+            <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center
               justify-center mx-auto mb-4">
               <span className="text-3xl">✨</span>
             </div>
             <h1 className="text-2xl font-bold text-gray-900">Clínica Estética</h1>
-            <p className="text-gray-500 text-sm mt-1">Faça login para continuar</p>
+            <p className="text-gray-500 text-sm mt-1">
+              Faça login para continuar
+            </p>
           </div>
 
           {/* Formulário */}

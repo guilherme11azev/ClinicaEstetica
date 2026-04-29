@@ -1,12 +1,13 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://localhost:5083/api',
+  baseURL: 'https://localhost:7000/api', // ajuste a porta da sua API
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
+// Interceptor de requisição — adiciona o token JWT automaticamente
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -15,6 +16,7 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
+// Interceptor de resposta — redireciona para login se 401
 api.interceptors.response.use(
   (response) => response,
   (error) => {

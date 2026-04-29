@@ -1,6 +1,5 @@
-
-import api from "../axios";
-import type { ProfDto, CriarProfissionalDto } from "../../types";
+import api from '../axios';
+import { PacienteDto, CriarPacienteDto } from '../../types';
 
 export const pacientesApi = {
   obterTodos: async (busca?: string): Promise<PacienteDto[]> => {
@@ -20,10 +19,7 @@ export const pacientesApi = {
     return data;
   },
 
-  atualizar: async (
-    id: string,
-    dto: Partial<CriarPacienteDto>
-  ): Promise<void> => {
+  atualizar: async (id: string, dto: Partial<CriarPacienteDto>): Promise<void> => {
     await api.put(`/pacientes/${id}`, dto);
   },
 

@@ -43,15 +43,6 @@ export interface ProfissionalDto {
   status: string;
 }
 
-export interface CriarProfissionalDto {
-  nomeCompleto: string;
-  cpf: string;
-  telefone: string;
-  email?: string;
-  cargo?: string;
-  especialidades?: string;
-}
-
 export interface AgendamentoDto {
   id: string;
   pacienteId: string;

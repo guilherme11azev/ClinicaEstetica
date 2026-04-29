@@ -1,5 +1,5 @@
-import api from "../axios";
-import Dto from "../../types";
+import api from '../axios';
+import { TokenDto } from '../../types';
 
 interface LoginDto {
   email: string;

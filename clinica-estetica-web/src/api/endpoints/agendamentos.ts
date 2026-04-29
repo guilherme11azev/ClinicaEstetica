@@ -1,12 +1,8 @@
-import api from "../axios";
-import type { AgendamentoDto, CriarAgendamentoDto } from "../../types";
-``
+import api from '../axios';
+import { AgendamentoDto, CriarAgendamentoDto } from '../../types';
 
 export const agendamentosApi = {
-  obterPorPeriodo: async (
-    inicio: string,
-    fim: string
-  ): Promise<AgendamentoDto[]> => {
+  obterPorPeriodo: async (inicio: string, fim: string): Promise<AgendamentoDto[]> => {
     const { data } = await api.get<AgendamentoDto[]>('/agendamentos', {
       params: { inicio, fim },
     });
@@ -37,19 +33,12 @@ export const agendamentosApi = {
   },
 
   cancelar: async (id: string, motivo: string): Promise<void> => {
-    await api.patch(`/agendamentos/${id}/cancelar`, {
-      motivoCancelamento: motivo,
-    });
+    await api.patch(`/agendamentos/${id}/cancelar`, { motivoCancelamento: motivo });
   },
 
-  atualizarStatus: async (
-    id: string,
-    novoStatus: string
-  ): Promise<void> => {
-    await api.patch(
-      `/agendamentos/${id}/status`,
-      JSON.stringify(novoStatus),
-      { headers: { 'Content-Type': 'application/json' } }
-    );
+  atualizarStatus: async (id: string, novoStatus: string): Promise<void> => {
+    await api.patch(`/agendamentos/${id}/status`, JSON.stringify(novoStatus), {
+      headers: { 'Content-Type': 'application/json' },
+    });
   },
 };

@@ -16,13 +16,7 @@ const tamanhoClasses = {
   xl: 'max-w-4xl',
 };
 
-export function Modal({
-  aberto,
-  onFechar,
-  titulo,
-  children,
-  tamanho = 'md',
-}: ModalProps) {
+export function Modal({ aberto, onFechar, titulo, children, tamanho = 'md' }: ModalProps) {
   useEffect(() => {
     if (aberto) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = '';
@@ -37,10 +31,8 @@ export function Modal({
         className="absolute inset-0 bg-black/40 backdrop-blur-sm"
         onClick={onFechar}
       />
-      <div
-        className={`relative bg-white rounded-xl shadow-xl w-full
-          ${tamanhoClasses[tamanho]} max-h-[90vh] overflow-y-auto`}
-      >
+      <div className={`relative bg-white rounded-xl shadow-xl w-full
+        ${tamanhoClasses[tamanho]} max-h-[90vh] overflow-y-auto`}>
         <div className="flex items-center justify-between p-6 border-b">
           <h2 className="text-lg font-semibold text-gray-900">{titulo}</h2>
           <button
