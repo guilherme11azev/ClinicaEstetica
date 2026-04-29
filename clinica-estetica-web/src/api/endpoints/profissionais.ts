@@ -1,5 +1,5 @@
 import api from '../axios';
-import { ProfissionalDto } from '../../types';
+import type { ProfissionalDto, CriarProfissionalDto } from '../../types';
 
 export const profissionaisApi = {
   obterTodos: async (apenasAtivos = false): Promise<ProfissionalDto[]> => {

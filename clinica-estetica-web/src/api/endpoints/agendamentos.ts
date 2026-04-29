@@ -1,5 +1,5 @@
 import api from '../axios';
-import { AgendamentoDto, CriarAgendamentoDto } from '../../types';
+import type { AgendamentoDto, CriarAgendamentoDto } from '../../types';
 
 export const agendamentosApi = {
   obterPorPeriodo: async (inicio: string, fim: string): Promise<AgendamentoDto[]> => {

@@ -6,8 +6,9 @@ import { Dashboard } from '../pages/Dashboard';
 import { PacientesPage } from '../pages/pacientes/PacientesPage';
 import { ProfissionaisPage } from '../pages/profissionais/ProfissionaisPage';
 import { AgendamentosPage } from '../pages/agendamentos/AgendamentosPage';
+import type { ReactNode } from 'react';
 
-function RotaProtegida({ children }: { children: React.ReactNode }) {
+function RotaProtegida({ children }: { children: ReactNode }) {
   const { isAutenticado, carregando } = useAuth();
 
   if (carregando) {

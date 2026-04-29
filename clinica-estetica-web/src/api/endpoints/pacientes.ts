@@ -1,5 +1,5 @@
 import api from '../axios';
-import { PacienteDto, CriarPacienteDto } from '../../types';
+import type { PacienteDto, CriarPacienteDto } from '../../types';
 
 export const pacientesApi = {
   obterTodos: async (busca?: string): Promise<PacienteDto[]> => {
